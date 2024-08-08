@@ -23,6 +23,7 @@ export const Order = () => {
       if (id === item?.id) {
         return {
           ...item,
+          
           qty: item?.qty + 1,
         };
       } else {

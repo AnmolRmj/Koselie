@@ -16,8 +16,8 @@ export const Dashboard = () => {
   return (
   
     <div className=" w-full gap-y-2">
-      <Carousel data={hotproduct} />
-      <ReusableComponentFirst title={"New Arrivals"} data={hotproduct} />
+      <div><Carousel data={hotproduct} /> </div>
+      <div><ReusableComponentFirst title={"New Arrivals"} data={hotproduct} /> </div>
       <ReusableComponentSecond title={" Our Best Seller"} data={premiumproducts} />
       <LatestProduct title={'Premium'} data={premiumproducts} />
       <ReusableComponentThird title={"Most Recent Product"} data={MostRecentProduct} />

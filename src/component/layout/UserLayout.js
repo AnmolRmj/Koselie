@@ -70,7 +70,7 @@ const UserLayout = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickdrawer = () => {
-    if (carditem?.addtocard?.data?.length) {
+    if (carditem?.addtocard?.data?.length ) {
       setOpen(true);
     }
   };
@@ -108,7 +108,7 @@ const UserLayout = () => {
     dispatch(fetchSearchProduct(value.target.value));
   };
   const { products, loading } = useSelector((state) => state?.searchproduct);
-  console.log("datasearch", products.data);
+  console.log("datasearch", products);
   const menu = (
     <Menu>
       {authinfo.map((item) => (
@@ -135,9 +135,9 @@ const UserLayout = () => {
         },
       }}
     >
-      <Layout>
+      <Layout >
         <Header
-          className="sticky top-0 hover:cursor-pointer"
+          className="sticky top-0 hover:cursor-pointer bg-gray-700"
           style={{
             zIndex: 1000,
             background: "white",
@@ -179,13 +179,20 @@ const UserLayout = () => {
         </Header>
 
         <Content style={{ padding: "0 24px", marginTop: "40px" }}>
+          
           <div
             style={{
               padding: 24,
               minHeight: 5,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
+              
             }}
+            
+          >
+            <div
+            className="sticky top-0 bg-white z-10"
+            style={{ padding: 24, background: colorBgContainer, borderRadius: borderRadiusLG }}
           >
             <div className="md:flex md:justify-between md:items-center">
               {/* Sort by Category */}
@@ -249,13 +256,14 @@ const UserLayout = () => {
               </div>
             </div>
           </div>
+          </div>
         </Content>
 
         <Content style={{ padding: "0 48px", marginTop: "40px" }}>
           <div
             style={{
               padding: 24,
-              minHeight: 380,
+              minHeight: 680,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}

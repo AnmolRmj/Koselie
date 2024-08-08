@@ -26,7 +26,7 @@ export const fetchUser = createAsyncThunk("api/fetchuser",
 });
 export const fetchSearchProduct = createAsyncThunk("api/SearchProduct", 
   async (category) => {
-    const response = await axios.get(`https://amazon-product-reviews-keywords.p.rapidapi.com/categories/${category}`);
+    const response = await axios.get(`https://fakestoreapi.com/products/${category}`);
 
    
   return response;
